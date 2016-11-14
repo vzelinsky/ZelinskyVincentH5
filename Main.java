@@ -6,5 +6,13 @@
 public class Main {
   //main method
   public static void main(String[] args) {
+    List myList = new List();
+    
+    myList.addNode();
+    myList.addNode();
+    myList.addNode();
+    myList.addNode();
+    
+    myList.printListForward();
   }
 }
