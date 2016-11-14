@@ -5,17 +5,17 @@
  */
 public class Node {
   //Private fields
-  //Contains the String stored in a Node
-  private String data;
+  //Contains the int stored in a Node
+  private int data;
   //Contains a reference to the next Node object
   private Node next;
   //Contains a reference to the prev Node object
   private Node prev;
   
   //Constructors
-  //Accepts a String argument
-  public Node(String dataInput) {
-    //Sets data to the argument passed, a String
+  //Accepts an int argument
+  public Node(int dataInput) {
+    //Sets data to the argument passed, a int
     this.data = dataInput;
     //Sets next to null
     this.next = null;
@@ -23,8 +23,8 @@ public class Node {
     this.prev = null;
   }
   //Accepts arguments for the fields data, next, and prev
-  public Node(String dataInput, Node n, Node p) {
-    //Sets data to the first argument passed, a String
+  public Node(int dataInput, Node n, Node p) {
+    //Sets data to the first argument passed, a int
     this.data = dataInput;
     //Sets next to the second argument passed, a reference to a Node object
     this.next = n;
@@ -34,7 +34,7 @@ public class Node {
   
   //Getter methods
   //Returns data field
-  public String getData(){
+  public int getData(){
     return data;
   }
   //Returns the reference to the Node stored at next
@@ -47,7 +47,7 @@ public class Node {
   }
   //Setter methods
   //Sets the data field to the argument passed
-  public void setData(String dataInput){
+  public void setData(int dataInput){
     this.data = dataInput;
   }
   //Sets the next Node to the referenced Node in the argument
