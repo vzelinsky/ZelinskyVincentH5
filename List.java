@@ -1,7 +1,7 @@
-/* List.java(S+Q)
+/* List.java(Sorting)
  * Written by Vincent Zelinsky
  * 
- * Contains the necessary methods to create a Doubly Linked List, interacts with Node.java
+ * Contains the necessary methods to create a Singly Linked List, interacts with Node(Sorting).java
  */
 public class List {
   //Private fields
