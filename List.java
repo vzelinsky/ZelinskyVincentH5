@@ -3,6 +3,7 @@
  * 
  * Contains the necessary methods to create a Singly Linked List, interacts with Node(Sorting).java
  */
+import java.util.Random;
 public class List {
   //Private fields
   //Contains a reference to the head Node object
@@ -32,19 +33,23 @@ public class List {
   
   //addNode method
   //Adds a Node to the List in chronological order
-  public void addNode(int dataInput) {
+  public void addNode() {
     //if the List is empty (head = null)
     //Inserts the new Node at head and makes it the tail as it is the only Node
     if(head == null) {
+      Random rand = new Random();
+      int random = rand.nextInt(100);
       //Add the Node as the head
-      head = new Node(dataInput);
+      head = new Node(random);
       //Set the tail to the same Node as head
       tail = head;
     }
     else {
+      Random rand = new Random();
+      int random = rand.nextInt(100);
       //Creates a new Node and calls the third constructor in Node
       //The argument gets passed as the int, the next Node is null, and the prev Node is the tail 
-      Node n = new Node(dataInput, null, tail);
+      Node n = new Node(random, null, tail);
       //The new Node is added as the next Node of the current tail
       tail.setNext(n);
       //The new Node is the new tail
