@@ -57,6 +57,13 @@ public class List {
     }
   }
   
+  //popList method
+  //Populates the List with listLength(the argument) amount of random int Nodes
+  public void popList(int listLength) {
+    for(int i = 0; i<listLength; i++) {
+      this.addNode();
+    }
+  }
   //Print methods
   //printListForward method 
   //Traverses list and prints every Node alphabetically forward (from head to tail)
