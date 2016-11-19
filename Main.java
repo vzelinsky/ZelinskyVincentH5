@@ -12,9 +12,14 @@ public class Main {
     //myList.addNode();
     //myList.addNode();
     //myList.addNode();
-    myList.popList(5);
+    myList.popList(3);
     
     myList.printListForward();
     System.out.println(myList.length());
+    
+    BubbleSort sorter = new BubbleSort();
+    sorter.sortIntList(myList);
+    
+    //myList.printListForward();
   }
 }
