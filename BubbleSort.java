@@ -13,5 +13,6 @@ public class BubbleSort {
   //sortIntList method
   //Sorts an Int
   public void sortIntList(List listInput){
+    Node temp;
   }
 }
