@@ -15,5 +15,6 @@ public class Main {
     myList.popList(5);
     
     myList.printListForward();
+    System.out.println(myList.length());
   }
 }

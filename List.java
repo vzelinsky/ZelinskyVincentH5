@@ -64,6 +64,7 @@ public class List {
       this.addNode();
     }
   }
+  
   //Print methods
   //printListForward method 
   //Traverses list and prints every Node alphabetically forward (from head to tail)
@@ -77,6 +78,21 @@ public class List {
       //Traverse Node t to the next Node in the List
       t = t.getNext();
     }
+  }
+  
+  //length method
+  //Returns the length of the List
+  public int length() {
+    //Initializes a traversal Node, t, at head
+    Node t = head;
+    int i = 0;
+    //While the Node t is not equal to null loop
+    while(t != null) {
+      i++;
+      //Traverse Node t to the next Node in the List
+      t = t.getNext();
+    }
+    return i;
   }
   
   //deleteTail method
