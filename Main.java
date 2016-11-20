@@ -15,20 +15,21 @@ public class Main {
     //myList.popList(3);
     myList.printListForward();
     System.out.println("----------");
-    int[] myArray;
-    myArray = (myList.arrayOutput());
-    System.out.println(myArray[0]);
-    System.out.println(myArray[1]);
-    System.out.println(myArray[2]);
-    System.out.println(myArray[3]);
-    myList.arrayInput(myArray);
-    myList.printListForward();
+    //int[] myArray;
+    //myArray = (myList.arrayOutput());
+    //System.out.println(myArray[0]);
+    //System.out.println(myArray[1]);
+    //System.out.println(myArray[2]);
+    //System.out.println(myArray[3]);
+    //myList.arrayInput(myArray);
+    
+    //myList.printListForward();
     //myList.printListForward();
     //System.out.println(myList.length());
     
-    //BubbleSort sorter = new BubbleSort();
-    //sorter.sortIntList(myList);
+    BubbleSort sorter = new BubbleSort();
+    sorter.sortIntList(myList);
     //System.out.println("fuck this");
-    //myList.printListForward();
+    myList.printListForward();
   }
 }
