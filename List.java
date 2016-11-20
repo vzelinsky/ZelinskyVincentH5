@@ -56,6 +56,27 @@ public class List {
       tail = tail.getNext();
     }
   }
+  //addNode method
+  //Adds a Node to the List in chronological order
+  public void addNode(int input) {
+    //if the List is empty (head = null)
+    //Inserts the new Node at head and makes it the tail as it is the only Node
+    if(head == null) {
+      //Add the Node as the head
+      head = new Node(input);
+      //Set the tail to the same Node as head
+      tail = head;
+    }
+    else {
+      //Creates a new Node and calls the third constructor in Node
+      //The argument gets passed as the int, the next Node is null, and the prev Node is the tail 
+      Node n = new Node(input, null, tail);
+      //The new Node is added as the next Node of the current tail
+      tail.setNext(n);
+      //The new Node is the new tail
+      tail = tail.getNext();
+    }
+  }
   
   //popList method
   //Populates the List with listLength(the argument) amount of random int Nodes
@@ -66,7 +87,7 @@ public class List {
   }
   
   //arrayOutput method
-  //Returns an Array with identical contents of the List
+  //Returns an array with identical contents of the List
   public int[] arrayOutput() {
     int[] arrayOutput = new int[this.length()];
     Node t = head;
@@ -75,6 +96,14 @@ public class List {
       t = t.getNext();
     }
     return arrayOutput;
+  }
+  //arrayInput method
+  //Takes in an array and overwrites the contents of the List
+  public void arrayInput(int[] arrayInput){
+    this.deleteList();
+    for (int i = 0; i < arrayInput.length; i++){
+      this.addNode(arrayInput[i]);
+    }
   }
   
   //Print methods
