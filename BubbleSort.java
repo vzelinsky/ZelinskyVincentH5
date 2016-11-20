@@ -3,6 +3,7 @@
  * 
  * Contains the necessary methods to sort data with the bubble sort algorithm
  */
+import java.util.Arrays;
 public class BubbleSort {
   //Private fields
   //private Node t;
@@ -17,6 +18,31 @@ public class BubbleSort {
   public void sortIntList(List listInput){
     int[] array; 
     array = (listInput.arrayOutput());
-    listInput.addNode(1); //it does lol <3
+    int temp;
+    int i,k;
+    boolean finished;
+    
+    finished = false;
+    
+    while(!finished)
+    {
+      //System.out.println("Step "+(array.length-k)+": ");
+      //System.out.println(Arrays.toString(array));
+      
+      finished = true;
+      
+      for(i=0; i < array.length-1; i++)
+      {
+        if(array[i] > array[i+1])
+        {
+          temp = array[i];
+          array[i] = array[i+1];
+          array[i+1] = temp;
+          
+          finished = false;
+        }
+      }
+    }
+    listInput.arrayInput(array);
   }
 }
