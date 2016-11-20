@@ -65,6 +65,18 @@ public class List {
     }
   }
   
+  //arrayOutput method
+  //Returns an Array with identical contents of the List
+  public int[] arrayOutput() {
+    int[] arrayOutput = new int[this.length()];
+    Node t = head;
+    for (int i = 0; i < this.length(); i++){
+      arrayOutput[i] = t.getData();
+      t = t.getNext();
+    }
+    return arrayOutput;
+  }
+  
   //Print methods
   //printListForward method 
   //Traverses list and prints every Node alphabetically forward (from head to tail)
