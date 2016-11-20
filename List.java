@@ -180,6 +180,6 @@ public class List {
     /* Everything else is swept up by garbage collection
      */
     //Print success
-    System.out.println("The List has been deleted");
+    //System.out.println("The List has been deleted");
   }
 }
