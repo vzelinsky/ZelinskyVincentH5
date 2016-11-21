@@ -32,7 +32,8 @@ public class List {
   }
   
   //addNode methods
-  //Adds a Node to the List in chronological order
+  //Adds Nodes to the List in chronological order
+  //Adds a Node to the List with a random int (0-100) as the data for the Node
   public void addNode() {
     //if the List is empty (head = null)
     //Inserts the new Node at head and makes it the tail as it is the only Node
@@ -56,8 +57,8 @@ public class List {
       tail = tail.getNext();
     }
   }
-  //Overloades addNode method to accept an int argument
-  //Adds a Node to the List in chronological order
+  //Overloades addNode method
+  //Adds a Node to the List with the int argument as the data for the Node
   public void addNode(int input) {
     //if the List is empty (head = null)
     //Inserts the new Node at head and makes it the tail as it is the only Node
