@@ -6,13 +6,11 @@
 import java.util.Arrays;
 public class BubbleSort {
   //Private fields
-  //private Node t;
-  //private Node lastPos;
+  
   //Constructors
   public BubbleSort() {
-    //this.t = null;
-    //this.lastPos = null;
   }
+  
   //sortIntList method
   //Sorts a List with int data by transfering into an array, sorting the data, and then transferring it back to the List
   public void sortIntList(List listInput){
