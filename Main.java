@@ -1,7 +1,7 @@
 /* Main.java(H5)
  * Written by Vincent Zelinsky
  * 
- * Contains the methods to test Stack.java and Queue.java
+ * Contains the methods to test BubbleSort.java
  */
 public class Main {
   //main method
