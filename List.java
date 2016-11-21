@@ -31,7 +31,7 @@ public class List {
     return tail;
   }
   
-  //addNode method
+  //addNode methods
   //Adds a Node to the List in chronological order
   public void addNode() {
     //if the List is empty (head = null)
@@ -56,7 +56,7 @@ public class List {
       tail = tail.getNext();
     }
   }
-  //addNode method
+  //Overloades addNode method to accept an int argument
   //Adds a Node to the List in chronological order
   public void addNode(int input) {
     //if the List is empty (head = null)
@@ -81,7 +81,9 @@ public class List {
   //popList method
   //Populates the List with listLength(the argument) amount of random int Nodes
   public void popList(int listLength) {
+    //for when i is less than desired listLength loop then increment i 
     for(int i = 0; i<listLength; i++) {
+      //add a Node to the List with random int data
       this.addNode();
     }
   }
@@ -89,10 +91,15 @@ public class List {
   //arrayOutput method
   //Returns an array with identical contents of the List
   public int[] arrayOutput() {
+    //Creates a new array with length equal to that of the List that called it
     int[] arrayOutput = new int[this.length()];
+    //Initializes a traversal Node, t, at head
     Node t = head;
+    //for when i is less than the length of the this List loop then increment i
     for (int i = 0; i < this.length(); i++){
+      //sets array element of index i equal to the data stored in the current Node
       arrayOutput[i] = t.getData();
+      //Traverses the Node to the next Node in the List
       t = t.getNext();
     }
     return arrayOutput;
@@ -100,8 +107,11 @@ public class List {
   //arrayInput method
   //Takes in an array and overwrites the contents of the List
   public void arrayInput(int[] arrayInput){
+    //Delete the elements in the List
     this.deleteList();
+    //for when i is less than the length of the array loop then increment i
     for (int i = 0; i < arrayInput.length; i++){
+      //Adds a new node with the value of array index i
       this.addNode(arrayInput[i]);
     }
   }
@@ -126,48 +136,16 @@ public class List {
   public int length() {
     //Initializes a traversal Node, t, at head
     Node t = head;
+    //Initializes counter
     int i = 0;
     //While the Node t is not equal to null loop
     while(t != null) {
+      //Increment counter
       i++;
       //Traverse Node t to the next Node in the List
       t = t.getNext();
     }
     return i;
-  }
-  
-  //deleteTail method
-  //Deletes the tail Node and sets the new tail
-  public void deleteTail() {
-    //Initializes a temp Node to be deleted, d, at tail
-    Node d = tail;
-    //if the tail is null
-    if(d == null) {
-      //Print that the Node does not exist
-      System.out.println("Node did not exist");
-    }
-    else {
-      //Initializes the Node next to the Node after Node d
-      Node next = d.getNext();
-      //Initializes the Node prev to the Node before Node d
-      Node prev = d.getPrev();
-      //if the Node before Node d is null (Node d is head)
-      if(prev == null)
-        //head is now the Node after Node d
-        head = next;
-      else
-        //The next Node after Node prev is Node next (routing around Node d) 
-        prev.setNext(next);
-      //if the Node after Node d is null (Node d is tail)
-      if(next == null)
-        //tail is now the Node before Node d
-        tail = prev;
-      else
-        //The prev Node before Node next is Node prev (routing around Node d)
-        next.setPrev(prev);
-      //Print success
-      //System.out.println("The Node has been deleted");
-    }
   }
   
   //deleteList method
